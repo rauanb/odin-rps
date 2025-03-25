@@ -11,13 +11,13 @@ function getRandomInt(max = 3) {
 function getComputerChoice() {
     const opcoes = ['rock', 'paper', 'scissors'];
     let computer = opcoes[getRandomInt()];
-    console.log(computer);
+    console.log(`Computador: ${computer}`);
     return computer;
 }
 
 function getHumanChoice() {
     let human = prompt('Pick one of these: rock, paper ou scissors');
-    console.log(human);
+    console.log(`Humano: ${human}`);
     return human;
 }
 
@@ -75,6 +75,17 @@ function playRound() {
     console.log(`Human: ${humanScore} | Computer: ${computerScore}`)
 };
 
-playRound();
+function playGame() {
+    let i = 1;
+    while ( i < 6 ) {
+        console.log(`Rodada ${i}`);
+        i++;
+        playRound();
+    }
+};
+
+playGame();
+
+// playRound();
 // getComputerChoice(); OK
 // getHumanChoice(); OK
