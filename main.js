@@ -1,10 +1,5 @@
-// Documentação da Mozilla sobre o Math.Random apresentou uma função para pegar inteiros
-// As linhas comentadas são as originais, as seguintes são as alteradas para se adequarem às necessidades do exercício
-
-// function getRandomInt(max) {
-function getRandomInt() {
-    // const inteiro = Math.floor(Math.random() * max);
-    const inteiro = Math.floor(Math.random() * 3);
+function getRandomInt(max = 3) {
+    const inteiro = Math.floor(Math.random() * max);
     // console.log(inteiro);
     return inteiro
 }
@@ -15,5 +10,11 @@ function getComputerChoice() {
     let computer = opcoes[getRandomInt()];
     console.log(computer)
 }
+
+function getHumanChoice() {
+    let human = prompt('Pick one of these: Rock, Paper ou Scissors');
+    console.log(human);
+}
 // getRandomInt();
-getComputerChoice();
+// getComputerChoice();
+getHumanChoice();
